@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B06711CC2A8A85AC00C62D9A /* TabBarCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B06711CC2A8A85AC00C62D9A /* TabBarCode-Refectoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TabBarCode-Refectoring.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06711CF2A8A85AC00C62D9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B06711D12A8A85AC00C62D9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B06711D32A8A85AC00C62D9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		B06711C32A8A85AC00C62D9A = {
 			isa = PBXGroup;
 			children = (
-				B06711CE2A8A85AC00C62D9A /* TabBarCode */,
+				B06711CE2A8A85AC00C62D9A /* TabBarCode-Refectoring */,
 				B06711CD2A8A85AC00C62D9A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +58,12 @@
 		B06711CD2A8A85AC00C62D9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B06711CC2A8A85AC00C62D9A /* TabBarCode.app */,
+				B06711CC2A8A85AC00C62D9A /* TabBarCode-Refectoring.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B06711CE2A8A85AC00C62D9A /* TabBarCode */ = {
+		B06711CE2A8A85AC00C62D9A /* TabBarCode-Refectoring */ = {
 			isa = PBXGroup;
 			children = (
 				B06711CF2A8A85AC00C62D9A /* AppDelegate.swift */,
@@ -74,7 +74,7 @@
 				B06711DA2A8A85AD00C62D9A /* LaunchScreen.storyboard */,
 				B06711DD2A8A85AD00C62D9A /* Info.plist */,
 			);
-			path = TabBarCode;
+			path = "TabBarCode-Refectoring";
 			sourceTree = "<group>";
 		};
 		B06711E42A8A88F200C62D9A /* Views */ = {
@@ -101,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B06711CB2A8A85AC00C62D9A /* TabBarCode */ = {
+		B06711CB2A8A85AC00C62D9A /* TabBarCode-Refectoring */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B06711E02A8A85AD00C62D9A /* Build configuration list for PBXNativeTarget "TabBarCode" */;
+			buildConfigurationList = B06711E02A8A85AD00C62D9A /* Build configuration list for PBXNativeTarget "TabBarCode-Refectoring" */;
 			buildPhases = (
 				B06711C82A8A85AC00C62D9A /* Sources */,
 				B06711C92A8A85AC00C62D9A /* Frameworks */,
@@ -113,9 +113,9 @@
 			);
 			dependencies = (
 			);
-			name = TabBarCode;
+			name = "TabBarCode-Refectoring";
 			productName = TabBarCode;
-			productReference = B06711CC2A8A85AC00C62D9A /* TabBarCode.app */;
+			productReference = B06711CC2A8A85AC00C62D9A /* TabBarCode-Refectoring.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,7 +133,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B06711C72A8A85AC00C62D9A /* Build configuration list for PBXProject "TabBarCode" */;
+			buildConfigurationList = B06711C72A8A85AC00C62D9A /* Build configuration list for PBXProject "TabBarCode-Refectoring" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B06711CB2A8A85AC00C62D9A /* TabBarCode */,
+				B06711CB2A8A85AC00C62D9A /* TabBarCode-Refectoring */,
 			);
 		};
 /* End PBXProject section */
@@ -324,7 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TabBarCode/Info.plist;
+				INFOPLIST_FILE = "TabBarCode-Refectoring/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -336,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TimoCode.TabBarCode;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TimoCode.TabBarCode-Refectoring";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -355,7 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TabBarCode/Info.plist;
+				INFOPLIST_FILE = "TabBarCode-Refectoring/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -367,7 +367,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TimoCode.TabBarCode;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TimoCode.TabBarCode-Refectoring";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -381,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B06711C72A8A85AC00C62D9A /* Build configuration list for PBXProject "TabBarCode" */ = {
+		B06711C72A8A85AC00C62D9A /* Build configuration list for PBXProject "TabBarCode-Refectoring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B06711DE2A8A85AD00C62D9A /* Debug */,
@@ -390,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B06711E02A8A85AD00C62D9A /* Build configuration list for PBXNativeTarget "TabBarCode" */ = {
+		B06711E02A8A85AD00C62D9A /* Build configuration list for PBXNativeTarget "TabBarCode-Refectoring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B06711E12A8A85AD00C62D9A /* Debug */,
