@@ -6,7 +6,6 @@
 //
 
 import UIKit
-// git checking
 
 class LoginViewController: UIViewController {
 
@@ -27,6 +26,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
         setAutoLayout()
     }
 
@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
             loginButton.widthAnchor.constraint(equalToConstant: 120),
             loginButton.heightAnchor.constraint(equalToConstant: 45),
             loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
-            loginButton.centerYAnchor.constraint(equalToSystemSpacingBelow: view.centerYAnchor, multiplier: 0)
+            loginButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
         ])
     }
     
@@ -46,41 +46,21 @@ class LoginViewController: UIViewController {
     // 로그인 버튼이 눌렸을 때
     @objc func loginButtonTapped() {
         
-        // 탭 바 컨트롤러 생성
-        let tabBarCon = UITabBarController()
+        // 해당 화면을 띄우는 뷰 컨트롤러에 접근 (최종적으로 FirstViewController에 접근하기 위해)
+        if let presentingVC = presentingViewController {
+            // 해당 화면을 띄우는 탭 바 컨트롤러 접근
+            let tabBarCon = presentingVC as! UITabBarController
+            // 해당 화면을 띄우는 탭 바 컨트롤러에 있는 0번째 네비게이션 바 컨트롤러 접근
+            let nav = tabBarCon.viewControllers?[0] as! UINavigationController
+            // 해당 화면을 띄우는 탭 바 컨트롤러에 있는 0번째 네비게이션 바 컨트롤러에 있는 FirstViewController에 접근
+            let fitstVC = nav.viewControllers[0] as! FirstViewController
+            
+            // 해당 화면을 띄우는 탭 바 컨트롤러에 있는 네비게이션 바 컨트롤러에 있는 FirstViewController에 속한 isLoggedIn 변수에 접근
+            fitstVC.isLoggedIn.toggle()
+        }
         
-        // 네이게이션 바 코드로 생성(루트 뷰) + 변수에 뷰 컨트롤러 담기
-        let vc1 = UINavigationController(rootViewController: FirstViewController())
-        
-        // 변수에 뷰 컨트롤러 담기
-        let vc2 = SecondViewController()
-        let vc3 = ThirdViewController()
-        let vc4 = FourthViewController()
-        let vc5 = FifthViewController()
-        
-        // 뷰 컨트롤러 -> 탭 바 설정
-        tabBarCon.setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: false)
-        tabBarCon.modalPresentationStyle = .fullScreen
-        tabBarCon.tabBar.backgroundColor = .white
-        
-        // 탭 바 이름
-        vc1.title = "Main"
-        vc2.title = "Search"
-        vc3.title = "File"
-        vc4.title = "Me"
-        vc5.title = "Doc"
-        
-        // 탭 바 이미지
-        guard let items = tabBarCon.tabBar.items else { return }
-        items[0].image = UIImage(systemName: "trash")
-        items[1].image = UIImage(systemName: "folder")
-        items[2].image = UIImage(systemName: "paperplane")
-        items[3].image = UIImage(systemName: "doc")
-        items[4].image = UIImage(systemName: "note")
-        
-        // 프레젠트로 탭 바로 전환
-        present(tabBarCon, animated: true, completion: nil)
-
+        dismiss(animated: true, completion: nil)
     }
 }
+
 

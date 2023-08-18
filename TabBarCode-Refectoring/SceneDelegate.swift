@@ -11,12 +11,48 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    // 첫 화면이 뜨기전에 탭 바 내장
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // willConnectTo scene 설정
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: windowScene)
+        
+        // 탭 바 컨트롤러 생성
+        let tabBarCon = UITabBarController()
+        
+        // 네이게이션 바 코드로 생성(루트 뷰) + 변수에 뷰 컨트롤러 담기
+        let vc1 = UINavigationController(rootViewController: FirstViewController())
+        
+        // 변수에 뷰 컨트롤러 담기
+        let vc2 = SecondViewController()
+        let vc3 = ThirdViewController()
+        let vc4 = FourthViewController()
+        let vc5 = FifthViewController()
+        
+        // 뷰 컨트롤러 -> 탭 바 설정
+        tabBarCon.setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: false)
+        tabBarCon.modalPresentationStyle = .fullScreen
+        tabBarCon.tabBar.backgroundColor = .white
+        
+        // 탭 바 이름
+        vc1.title = "Main"
+        vc2.title = "Search"
+        vc3.title = "File"
+        vc4.title = "Me"
+        vc5.title = "Doc"
+        
+        // 탭 바 이미지
+        guard let items = tabBarCon.tabBar.items else { return }
+        items[0].image = UIImage(systemName: "trash")
+        items[1].image = UIImage(systemName: "folder")
+        items[2].image = UIImage(systemName: "paperplane")
+        items[3].image = UIImage(systemName: "doc")
+        items[4].image = UIImage(systemName: "note")
+        
+        // 첫 화면 탭바로 설정
+        window?.rootViewController = tabBarCon
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
