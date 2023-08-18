@@ -62,7 +62,7 @@ presentingViewController 없이 바로 firstVC에 FirstViewController() 할당�
 
 또한 아래와 같이 화면에 뷰가 fullScreen으로 표시되지 않는 에러가 발생하였습니다.
 ![errs1](https://github.com/kangsworkspace/TabBarCode-Refectoring/assets/141600830/3ca8fe42-fcca-45d9-a9ce-460b8303b929)   
-modalPresentationStyle = .fullScreen 코드에 오타가 있나 확인하였지만 정상이었고. 
+modalPresentationStyle = .fullScreen 코드에 오타가 있나 확인하였지만 정상이었고    
 FirstViewController를 변수에 할당하지 않고 바로 사용했기 때문에 생긴 오류였습니다.  
 변수에 할당해서 .fullScreen 세팅하였고 할당한 뷰 컨트롤러를 present()하였습니다.  
 
